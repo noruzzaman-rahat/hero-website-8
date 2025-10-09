@@ -1,56 +1,105 @@
-import React, {  useState } from "react";
+import React, { useState, useEffect } from "react";
 import AppCard from "../components/AppCard/AppCard";
 import useAppData from "../Hooks/useAppData";
 import Container from "../components/Container/Container";
+import AppErrorPage from "./AppErrorPage";
 
 const AllApp = () => {
   const { appData } = useAppData();
-  const [search, setSearch] = useState('')
-  const trimSearch = search.trim().toLowerCase()
+  const [search, setSearch] = useState("");
+  const [filteredApp, setFilteredApp] = useState(appData);
+  const [loading, setLoading] = useState(false);
 
- const fillterdeApp = search ? (appData.filter(app=> 
-      app.title.trim().toLowerCase().includes(trimSearch)))
-      : appData ;
-    
-  
- 
+  // Whenever search changes
+  useEffect(() => {
+    setLoading(true);
+
+    // Simulate async filtering (like an API delay)
+    const timeout = setTimeout(() => {
+      const trimSearch = search.trim().toLowerCase();
+
+      const result = search
+        ? appData.filter((app) =>
+            app.title.trim().toLowerCase().includes(trimSearch)
+          )
+        : appData;
+
+      setFilteredApp(result);
+      setLoading(false);
+    }, 500); // 0.5s delay for smooth UX
+
+    return () => clearTimeout(timeout);
+  }, [search, appData]);
+
   return (
     <div>
-      <Container className="">
-        <div className="text-center space-y-3 py-10">
-          <h1 className="text-3xl font-bold ">Our All Applications</h1>
-          <p className="text-[#627382]">
+      <Container>
+        {/* Header */}
+        <div className="text-center space-y-3 py-8 sm:py-12">
+          <h1 className="text-2xl sm:text-3xl font-bold">
+            Our All Applications
+          </h1>
+          <p className="text-[#627382] text-sm sm:text-base px-3 sm:px-0">
             Explore All Apps on the Market developed by us. We code for Millions
           </p>
         </div>
-        <div className="my-8 px-3 flex justify-between items-center">
-          <div className="text-xl font-semibold"><p>({fillterdeApp.length}) App Founded</p></div>
-          <div>
-            <label value={search} onChange={(e)=> setSearch(e.target.value)} className="input">
-              <svg
-                className="h-[1em] opacity-50"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+
+        {/* Search */}
+        <div className="my-6 sm:my-8 px-3 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <div className="text-lg sm:text-xl font-semibold">
+            <p>({filteredApp.length}) App Found</p>
+          </div>
+
+          <div className="w-full sm:w-auto flex items-center gap-2 border px-3 py-2 rounded-md shadow-sm bg-white">
+            <svg
+              className="h-[1.2em] opacity-50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                strokeLinejoin="round"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                fill="none"
+                stroke="currentColor"
               >
-                <g
-                  strokeLinejoin="round"
-                  strokeLinecap="round"
-                  strokeWidth="2.5"
-                  fill="none"
-                  stroke="currentColor"
-                >
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <path d="m21 21-4.3-4.3"></path>
-                </g>
-              </svg>
-              <input  type="search" required placeholder="Search" />
-            </label>
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input
+              type="search"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Search applications..."
+              className="outline-none w-full bg-transparent text-sm sm:text-base"
+            />
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 justify-items-center">
-          {fillterdeApp.map((app) => (
-            <AppCard key={app.id} app={app}></AppCard>
-          ))}
+
+        {/* Grid or Loading */}
+        <div className="grid place-items-center min-h-[200px] px-3 sm:px-0 pb-10">
+          {loading ? (
+            // 🔄 Fallback Loading Animation
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-10 h-10 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+              <p className="text-gray-500 text-sm">Searching apps...</p>
+            </div>
+          ) : filteredApp.length === 0 ? (
+            // ❌ No Results
+            // <p className="text-gray-500 text-center text-sm sm:text-base">
+            //   No applications found matching your search.
+            // </p>
+            <AppErrorPage></AppErrorPage>
+            
+          ) : (
+            // ✅ App Cards Grid
+            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 justify-items-center w-full">
+              {filteredApp.map((app) => (
+                <AppCard key={app.id} app={app} />
+              ))}
+            </div>
+          )}
         </div>
       </Container>
     </div>

@@ -17,7 +17,7 @@ const AppErrorPage = () => {
           </p>
           <Link
             to="/"
-            className="btn bg-[linear-gradient(125.07deg,_rgba(99,46,227,1),_rgba(159,98,242,1)_100%)]"
+            className="btn bg-[linear-gradient(125.07deg,_rgba(99,46,227,1),_rgba(159,98,242,1)_100%)] text-white"
           >
             Back Home
           </Link>

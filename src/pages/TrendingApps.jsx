@@ -25,7 +25,7 @@ const TrendingApps = () => {
                 }
           </div>
           <div className="py-10 flex justify-center">
-             <Link to="/allapp" className="btn"> See All</Link>
+             <Link to="/allapp" className="btn w-[145px] h-[48px] bg-gradient-to-r from-[#632ee3] to-[#9f62f2] text-xl text-white "> Show All</Link>
           </div>
         </div>
     

@@ -43,7 +43,7 @@ const Instalation = () => {
     deleteLocalStorage(id);
     console.log("button clicked");
 
-    // ✅ Toastify alert
+    // Toastify alert
     toast.info(`${title} has been uninstalled successfully!`, {
       position: "top-center",
       autoClose: 2000,

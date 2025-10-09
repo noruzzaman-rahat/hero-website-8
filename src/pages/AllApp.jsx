@@ -3,6 +3,7 @@ import AppCard from "../components/AppCard/AppCard";
 import useAppData from "../Hooks/useAppData";
 import Container from "../components/Container/Container";
 import AppErrorPage from "./AppErrorPage";
+import LoadImg from "../assets/logo.png";
 
 const AllApp = () => {
   const { appData } = useAppData();
@@ -82,14 +83,14 @@ const AllApp = () => {
           {loading ? (
             // 🔄 Fallback Loading Animation
             <div className="flex flex-col items-center gap-3">
-              <div className="w-10 h-10 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+              <div className="w-10 h-10 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin">
+                 <img src={LoadImg} alt="" />
+              </div>
               <p className="text-gray-500 text-sm">Searching apps...</p>
+             
             </div>
           ) : filteredApp.length === 0 ? (
-            // ❌ No Results
-            // <p className="text-gray-500 text-center text-sm sm:text-base">
-            //   No applications found matching your search.
-            // </p>
+            // No Results
             <AppErrorPage></AppErrorPage>
             
           ) : (

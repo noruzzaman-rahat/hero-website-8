@@ -68,7 +68,7 @@ const AppDetails = () => {
 
     toast.success(`${title} has been installed successfully!`, {
       position: "top-center",
-      autoClose: 3000,
+      autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -96,7 +96,7 @@ const AppDetails = () => {
               alt={title}
             />
           </div>
-
+        
           {/* App Info */}
           <div className="flex-1 space-y-4">
             {/* Title & Company */}

@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Container from "../components/Container/Container";
-import { getFromLocalStorage } from "../Utilities/AddToLocalStorage";
+import { getFromLocalStorage, deleteLocalStorage } from "../Utilities/AddToLocalStorage";
 import useAppData from "../Hooks/useAppData";
 import InstalledCard from "./InstalledCard";
+
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Instalation = () => {
   const { appData } = useAppData();
@@ -34,12 +38,32 @@ const Instalation = () => {
     setDropdownOpen(false); // Close dropdown after selection
   };
 
-  const handleUninstallApp = (id) => {
+  const handleUninstallApp = (id, title) => {
     setInstalledApp((prev) => prev.filter((app) => app.id !== id));
+    deleteLocalStorage(id);
+    console.log("button clicked");
+
+    // ✅ Toastify alert
+    toast.info(`${title} has been uninstalled successfully!`, {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      style: {
+        background: "white",
+        color: "gray",
+        fontWeight: "500",
+        fontSize: "16px",
+      },
+    });
   };
 
   return (
     <div className="min-h-screen bg-[#e9e9e9]">
+      <ToastContainer/>
       <Container>
         <div className="py-10 space-y-2">
           <h1 className="text-3xl font-bold text-center">Your Installed Apps</h1>

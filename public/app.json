@@ -1,0 +1,462 @@
+[
+  {
+    "image": "../demo-app (1).webp",
+    "title": "Epic Planner",
+    "companyName": "Info Studios",
+    "id": 1,
+    "description": "Epic Planner is built to streamline your day with ease and precision. Whether you’re managing work, personal tasks, or long-term goals, this intuitive planner keeps everything organized. The user interface is minimal yet powerful, designed for effortless navigation. It supports recurring tasks, color-coded labels, reminders, and syncing across devices. Perfect for busy professionals or students, it ensures no appointment or deadline is missed. Epic Planner adapts to your schedule and simplifies productivity through smart design choices. Stay ahead with better planning and a tool that understands your workflow.",
+    "size": 433,
+    "reviews": 19287,
+    "ratingAvg": 3.12,
+    "downloads": "6M",
+    "ratings": [
+      { "name": "1 star", "count": 3972 },
+      { "name": "2 star", "count": 3263 },
+      { "name": "3 star", "count": 4319 },
+      { "name": "4 star", "count": 3843 },
+      { "name": "5 star", "count": 3890 }
+    ]
+  },
+  {
+    "image": "../demo-app (2).webp",
+    "title": "Secure Editor",
+    "companyName": "Net Systems",
+    "id": 2,
+    "description": "Secure Editor is a robust text and code editor designed for users who prioritize security and reliability. With support for multiple file formats, password-protected editing, encrypted cloud sync, and version control, this tool ensures your work stays safe. The app features a distraction-free writing mode and customizable themes. Whether you're drafting confidential documents or editing code, Secure Editor provides tools that meet the needs of both casual users and professionals. It also includes automatic backup, syntax highlighting, and real-time collaboration, making it a top choice in secure productivity apps.",
+    "size": 248,
+    "reviews": 18453,
+    "ratingAvg": 3.67,
+    "downloads": "1.7M",
+    "ratings": [
+      { "name": "1 star", "count": 1893 },
+      { "name": "2 star", "count": 2056 },
+      { "name": "3 star", "count": 3627 },
+      { "name": "4 star", "count": 4702 },
+      { "name": "5 star", "count": 6175 }
+    ]
+  },
+  {
+    "image": "../demo-app (3).webp",
+    "title": "Creative Cleaner",
+    "companyName": "Cloud Labs",
+    "id": 3,
+    "description": "Creative Cleaner is the ultimate tool for users looking to boost performance by optimizing their device. This app offers real-time memory management, cache cleaning, junk file deletion, and storage analysis. Designed for users who demand both performance and aesthetics, its intuitive dashboard allows easy access to advanced functions. Whether you're gaming, working, or simply browsing, Creative Cleaner ensures your device stays responsive and efficient. Regular updates and cloud-based optimization suggestions help maintain long-term device health and reduce lag across various applications and tasks.",
+    "size": 189,
+    "reviews": 39755,
+    "ratingAvg": 3.45,
+    "downloads": "2.5M",
+    "ratings": [
+      { "name": "1 star", "count": 5075 },
+      { "name": "2 star", "count": 6432 },
+      { "name": "3 star", "count": 8054 },
+      { "name": "4 star", "count": 10123 },
+      { "name": "5 star", "count": 10071 }
+    ]
+  },
+  {
+    "image": "../demo-app (4).webp",
+    "title": "Smart Manager",
+    "companyName": "Cyber Solutions",
+    "id": 4,
+    "description": "Smart Manager is designed to optimize your device’s performance by efficiently managing resources. It offers fast cleanup tools, background app monitoring, and battery usage analysis. The app’s lightweight design means it won’t slow down your device while running essential maintenance tasks. You can customize cleaning schedules, monitor system health, and get detailed reports to help keep your phone running smoothly. Ideal for users who want a simple yet powerful utility to boost speed and efficiency without complicated settings or bloatware.",
+    "size": 76,
+    "reviews": 29532,
+    "ratingAvg": 3.89,
+    "downloads": "3.2M",
+    "ratings": [
+      { "name": "1 star", "count": 2412 },
+      { "name": "2 star", "count": 3134 },
+      { "name": "3 star", "count": 5823 },
+      { "name": "4 star", "count": 8012 },
+      { "name": "5 star", "count": 10151 }
+    ]
+  },
+  {
+    "image": "../demo-app (5).webp",
+    "title": "Cool Assistant",
+    "companyName": "Next Apps",
+    "id": 5,
+    "description": "Cool Assistant is your perfect companion for managing a busy professional lifestyle. It helps you organize meetings, reminders, notes, and deadlines with a simple, user-friendly interface. This app integrates seamlessly with your calendar and email, providing timely notifications and intelligent scheduling suggestions. Its voice command feature allows hands-free operation, and customizable widgets bring your tasks to your home screen. Whether you’re juggling multiple projects or personal commitments, Cool Assistant keeps you on track and reduces stress through effective organization.",
+    "size": 101,
+    "reviews": 48527,
+    "ratingAvg": 4.01,
+    "downloads": "9M",
+    "ratings": [
+      { "name": "1 star", "count": 3245 },
+      { "name": "2 star", "count": 4161 },
+      { "name": "3 star", "count": 7743 },
+      { "name": "4 star", "count": 13784 },
+      { "name": "5 star", "count": 19594 }
+    ]
+  },
+  {
+    "image": "../demo-app (6).webp",
+    "title": "Fast Cleaner",
+    "companyName": "App Developers",
+    "id": 6,
+    "description": "Fast Cleaner is packed with features designed to simplify your life by keeping your device clutter-free and responsive. It quickly identifies junk files, cleans cache, optimizes memory, and helps extend battery life. With an easy-to-use interface and one-tap cleaning, this app is suitable for all users regardless of tech experience. The app also provides detailed usage statistics and suggestions to keep your device running at peak performance. Frequent updates ensure compatibility with the latest devices and operating systems, making Fast Cleaner a reliable choice for daily maintenance.",
+    "size": 328,
+    "reviews": 27384,
+    "ratingAvg": 3.53,
+    "downloads": "5.3M",
+    "ratings": [
+      { "name": "1 star", "count": 3624 },
+      { "name": "2 star", "count": 4153 },
+      { "name": "3 star", "count": 6842 },
+      { "name": "4 star", "count": 6938 },
+      { "name": "5 star", "count": 5827 }
+    ]
+  },
+  {
+    "image": "https://example.com/app7.png",
+    "title": "Super Scanner",
+    "companyName": "Code Works",
+    "id": 7,
+    "description": "Super Scanner is a simple yet powerful tool designed to handle daily scanning tasks efficiently. Whether you need to scan documents, receipts, or photos, this app provides high-quality scans with edge detection and auto-enhancement features. It supports exporting scans to various formats such as PDF and JPEG and offers easy sharing options. The lightweight app operates quickly without draining battery, making it an essential tool for students, professionals, and anyone who wants to digitize physical documents effortlessly. Regular updates improve scanning accuracy and add new functionalities.",
+    "size": 59,
+    "reviews": 38957,
+    "ratingAvg": 4.11,
+    "downloads": "7.5M",
+    "ratings": [
+      { "name": "1 star", "count": 2658 },
+      { "name": "2 star", "count": 3891 },
+      { "name": "3 star", "count": 6432 },
+      { "name": "4 star", "count": 11249 },
+      { "name": "5 star", "count": 14727 }
+    ]
+  },
+  {
+    "image": "https://example.com/app8.png",
+    "title": "Amazing Alarm",
+    "companyName": "Tech Labs",
+    "id": 8,
+    "description": "Amazing Alarm helps you stay organized and efficient by offering customizable alarm tones, multiple alarm settings, and smart snooze options. Its intuitive design allows quick setup and management of alarms for different days or special occasions. The app also includes gentle wake-up features such as gradual volume increase and vibration support. Beyond waking you up, it offers reminders for tasks, meetings, or medication. Reliable and user-friendly, Amazing Alarm is ideal for anyone looking to improve their daily routine with punctuality and peace of mind.",
+    "size": 267,
+    "reviews": 18834,
+    "ratingAvg": 3.31,
+    "downloads": "3.4M",
+    "ratings": [
+      { "name": "1 star", "count": 3421 },
+      { "name": "2 star", "count": 3024 },
+      { "name": "3 star", "count": 4231 },
+      { "name": "4 star", "count": 4011 },
+      { "name": "5 star", "count": 4147 }
+    ]
+  },
+  {
+    "image": "https://example.com/app9.png",
+    "title": "Photo Master",
+    "companyName": "Creative Apps",
+    "id": 9,
+    "description": "Photo Master offers a powerful suite of editing tools tailored for both casual users and photography enthusiasts. With features like filters, cropping, brightness adjustment, and collage creation, you can easily enhance your photos and share them with friends. The app supports batch editing and provides quick save options, helping you streamline your workflow. Its intuitive interface makes complex edits accessible to everyone, and frequent updates add new creative options to keep your photos fresh and exciting.",
+    "size": 134,
+    "reviews": 24289,
+    "ratingAvg": 4.24,
+    "downloads": "6.8M",
+    "ratings": [
+      { "name": "1 star", "count": 1154 },
+      { "name": "2 star", "count": 1963 },
+      { "name": "3 star", "count": 4278 },
+      { "name": "4 star", "count": 8264 },
+      { "name": "5 star", "count": 9630 }
+    ]
+  },
+  {
+    "image": "https://example.com/app10.png",
+    "title": "Task Pro",
+    "companyName": "Efficiency Co.",
+    "id": 10,
+    "description": "Task Pro helps you organize your daily activities with precision and ease. Offering customizable task lists, priority tagging, and deadline reminders, it keeps you on track without overwhelming you. Sync your tasks across devices, collaborate with teammates, and receive smart suggestions to boost productivity. Its clean and modern design ensures a smooth user experience whether you’re managing work projects or personal errands. With offline support and frequent updates, Task Pro is a reliable assistant for busy professionals and students alike.",
+    "size": 89,
+    "reviews": 31785,
+    "ratingAvg": 4.37,
+    "downloads": "4.7M",
+    "ratings": [
+      { "name": "1 star", "count": 1890 },
+      { "name": "2 star", "count": 1552 },
+      { "name": "3 star", "count": 5876 },
+      { "name": "4 star", "count": 9245 },
+      { "name": "5 star", "count": 9222 }
+    ]
+  },
+  {
+    "image": "https://example.com/app11.png",
+    "title": "Music Wave",
+    "companyName": "Sound Labs",
+    "id": 11,
+    "description": "Music Wave lets you explore, stream, and enjoy your favorite tunes with an easy-to-navigate interface and personalized playlists. It offers high-quality audio streaming, offline downloads, and genre-based radio stations. The app’s smart recommendations adapt to your listening habits, introducing new artists and hits tailored to your tastes. Share your playlists with friends, discover trending music worldwide, and enjoy seamless playback on multiple devices. With regular updates and minimal ads, Music Wave is perfect for music lovers who want an immersive audio experience.",
+    "size": 215,
+    "reviews": 42210,
+    "ratingAvg": 4.45,
+    "downloads": "12M",
+    "ratings": [
+      { "name": "1 star", "count": 2153 },
+      { "name": "2 star", "count": 2310 },
+      { "name": "3 star", "count": 6530 },
+      { "name": "4 star", "count": 12814 },
+      { "name": "5 star", "count": 20403 }
+    ]
+  },
+  {
+    "image": "https://example.com/app12.png",
+    "title": "Fit Tracker",
+    "companyName": "Health First",
+    "id": 12,
+    "description": "Fit Tracker motivates you to stay active and healthy by tracking your workouts, steps, and calories burned. It includes customizable fitness plans, progress charts, and goal-setting features that adapt to your lifestyle. Sync with wearable devices for real-time data and receive personalized tips to improve your routine. The app also offers guided workouts and nutritional advice, making it a comprehensive tool for fitness enthusiasts of all levels. Regular challenges and community support help keep you motivated on your wellness journey.",
+    "size": 178,
+    "reviews": 35719,
+    "ratingAvg": 4.12,
+    "downloads": "8.9M",
+    "ratings": [
+      { "name": "1 star", "count": 2678 },
+      { "name": "2 star", "count": 2992 },
+      { "name": "3 star", "count": 6543 },
+      { "name": "4 star", "count": 10543 },
+      { "name": "5 star", "count": 12063 }
+    ]
+  },
+  {
+    "image": "https://example.com/app13.png",
+    "title": "Note Keeper",
+    "companyName": "Simple Soft",
+    "id": 13,
+    "description": "Note Keeper provides a clean and efficient way to capture ideas, reminders, and important information. It supports text notes, voice memos, and image attachments, organized in customizable folders. The app features quick search, color-coded labels, and password protection for privacy. Sync your notes across devices seamlessly and share them with others when needed. Designed for simplicity and speed, Note Keeper ensures that your thoughts are always accessible and easy to manage, whether for work, school, or personal use.",
+    "size": 67,
+    "reviews": 22145,
+    "ratingAvg": 4.18,
+    "downloads": "5.1M",
+    "ratings": [
+      { "name": "1 star", "count": 845 },
+      { "name": "2 star", "count": 1457 },
+      { "name": "3 star", "count": 3796 },
+      { "name": "4 star", "count": 6883 },
+      { "name": "5 star", "count": 7164 }
+    ]
+  },
+  {
+    "image": "https://example.com/app14.png",
+    "title": "Weather Now",
+    "companyName": "ClimateTech",
+    "id": 14,
+    "description": "Weather Now provides accurate, up-to-date weather forecasts with hourly and weekly views. Featuring interactive radar maps, severe weather alerts, and customizable widgets, it keeps you prepared for any conditions. The app’s clean design makes it easy to track temperature, precipitation, wind speed, and humidity. Whether planning your day or a trip, Weather Now ensures you have reliable weather information at your fingertips. Regular updates improve data accuracy and add new features to enhance your experience.",
+    "size": 53,
+    "reviews": 29412,
+    "ratingAvg": 4.29,
+    "downloads": "7.3M",
+    "ratings": [
+      { "name": "1 star", "count": 1320 },
+      { "name": "2 star", "count": 1785 },
+      { "name": "3 star", "count": 4912 },
+      { "name": "4 star", "count": 9453 },
+      { "name": "5 star", "count": 10942 }
+    ]
+  },
+  {
+    "image": "https://example.com/app15.png",
+    "title": "Budget Buddy",
+    "companyName": "Finance Solutions",
+    "id": 15,
+    "description": "Budget Buddy helps you take control of your finances with easy budgeting tools, expense tracking, and financial goal setting. The app supports multiple accounts, automatic transaction imports, and spending reports. Its intuitive interface allows you to categorize expenses, set saving targets, and receive alerts to stay on track. With built-in tips and educational content, Budget Buddy empowers you to make smarter money decisions. Whether you’re managing personal or household finances, this app simplifies budgeting and helps improve financial health.",
+    "size": 76,
+    "reviews": 18824,
+    "ratingAvg": 4.33,
+    "downloads": "3.9M",
+    "ratings": [
+      { "name": "1 star", "count": 847 },
+      { "name": "2 star", "count": 923 },
+      { "name": "3 star", "count": 3715 },
+      { "name": "4 star", "count": 5712 },
+      { "name": "5 star", "count": 6627 }
+    ]
+  },
+  {
+    "image": "https://example.com/app16.png",
+    "title": "Language Learner",
+    "companyName": "EduWorld",
+    "id": 16,
+    "description": "Language Learner is your pocket tutor for mastering new languages through interactive lessons, quizzes, and real-life conversation practice. It supports over 20 languages and features speech recognition to help improve pronunciation. With gamified challenges and progress tracking, the app keeps learning fun and engaging. You can practice anytime, anywhere, and connect with other learners globally. Language Learner is perfect for beginners and intermediate users seeking a practical and flexible approach to language acquisition.",
+    "size": 140,
+    "reviews": 27589,
+    "ratingAvg": 4.40,
+    "downloads": "5.5M",
+    "ratings": [
+      { "name": "1 star", "count": 910 },
+      { "name": "2 star", "count": 1207 },
+      { "name": "3 star", "count": 4865 },
+      { "name": "4 star", "count": 8249 },
+      { "name": "5 star", "count": 10358 }
+    ]
+  },
+  {
+    "image": "https://example.com/app17.png",
+    "title": "Travel Guide",
+    "companyName": "ExploreMore",
+    "id": 17,
+    "description": "Travel Guide is your companion for discovering the best attractions, restaurants, and hidden gems around the world. It offers detailed maps, user reviews, and personalized itineraries to make trip planning simple. With offline access and multilingual support, you can explore confidently without worrying about connectivity. The app also provides tips on local customs, safety, and budgeting, ensuring a smooth travel experience. Whether you’re a solo traveler or with family, Travel Guide helps you create unforgettable memories effortlessly.",
+    "size": 102,
+    "reviews": 23160,
+    "ratingAvg": 4.27,
+    "downloads": "4.2M",
+    "ratings": [
+      { "name": "1 star", "count": 1184 },
+      { "name": "2 star", "count": 1520 },
+      { "name": "3 star", "count": 4320 },
+      { "name": "4 star", "count": 6874 },
+      { "name": "5 star", "count": 7262 }
+    ]
+  },
+  {
+    "image": "https://example.com/app18.png",
+    "title": "Meditation Calm",
+    "companyName": "MindSpace",
+    "id": 18,
+    "description": "Meditation Calm helps reduce stress and improve focus with guided meditations, breathing exercises, and relaxing soundscapes. Designed for users of all experience levels, it offers daily mindfulness practices, sleep aids, and mood tracking. The app encourages self-care with personalized meditation plans and reminders to keep you consistent. Its soothing interface and high-quality audio help create a peaceful environment anytime, anywhere. Meditation Calm is ideal for those seeking mental clarity, emotional balance, and better sleep habits.",
+    "size": 110,
+    "reviews": 32945,
+    "ratingAvg": 4.48,
+    "downloads": "6.3M",
+    "ratings": [
+      { "name": "1 star", "count": 842 },
+      { "name": "2 star", "count": 971 },
+      { "name": "3 star", "count": 3945 },
+      { "name": "4 star", "count": 10342 },
+      { "name": "5 star", "count": 17845 }
+    ]
+  },
+  {
+    "image": "https://example.com/app19.png",
+    "title": "Fitness Tracker Pro",
+    "companyName": "HealthPulse",
+    "id": 19,
+    "description": "Fitness Tracker Pro offers comprehensive workout logging, heart rate monitoring, and calorie tracking to help you reach your fitness goals. With customizable exercise plans, progress charts, and integration with wearable devices, staying motivated is easier than ever. The app supports indoor and outdoor activities, including running, cycling, and yoga. Whether you’re a beginner or an athlete, Fitness Tracker Pro provides the tools to improve strength, endurance, and overall health.",
+    "size": 95,
+    "reviews": 24420,
+    "ratingAvg": 4.35,
+    "downloads": "4.8M",
+    "ratings": [
+      { "name": "1 star", "count": 920 },
+      { "name": "2 star", "count": 1020 },
+      { "name": "3 star", "count": 4980 },
+      { "name": "4 star", "count": 7760 },
+      { "name": "5 star", "count": 8740 }
+    ]
+  },
+  {
+    "image": "https://example.com/app20.png",
+    "title": "Photo Editor Max",
+    "companyName": "CreativeSoft",
+    "id": 20,
+    "description": "Photo Editor Max is a powerful image editing app featuring filters, overlays, and advanced adjustment tools. Easily enhance photos, create collages, and add artistic effects with an intuitive interface. The app supports layers, cropping, and retouching to help you produce professional-quality images. Perfect for social media enthusiasts and photography lovers looking to elevate their pictures effortlessly.",
+    "size": 130,
+    "reviews": 21875,
+    "ratingAvg": 4.30,
+    "downloads": "5.1M",
+    "ratings": [
+      { "name": "1 star", "count": 1130 },
+      { "name": "2 star", "count": 1380 },
+      { "name": "3 star", "count": 4675 },
+      { "name": "4 star", "count": 6450 },
+      { "name": "5 star", "count": 7240 }
+    ]
+  },
+  {
+    "image": "https://example.com/app21.png",
+    "title": "Recipe Master",
+    "companyName": "Foodies Inc.",
+    "id": 21,
+    "description": "Recipe Master offers thousands of recipes from around the world, complete with step-by-step instructions and nutritional info. Save favorites, create shopping lists, and get personalized recipe recommendations based on your tastes and dietary preferences. With video tutorials and meal planner features, cooking becomes fun and stress-free. Whether you’re a beginner or a home chef, Recipe Master helps you bring delicious meals to your table every day.",
+    "size": 120,
+    "reviews": 27600,
+    "ratingAvg": 4.42,
+    "downloads": "6.0M",
+    "ratings": [
+      { "name": "1 star", "count": 980 },
+      { "name": "2 star", "count": 1120 },
+      { "name": "3 star", "count": 5330 },
+      { "name": "4 star", "count": 9840 },
+      { "name": "5 star", "count": 13330 }
+    ]
+  },
+  {
+    "image": "https://example.com/app22.png",
+    "title": "Daily Journal",
+    "companyName": "Mindful Apps",
+    "id": 22,
+    "description": "Daily Journal helps you capture thoughts, track moods, and reflect on your day with easy-to-use journaling tools. Featuring text, photo, and voice entries, as well as prompts and mood trackers, it supports mental well-being and personal growth. The app includes privacy options, calendar views, and reminders to keep your journaling consistent. Perfect for anyone looking to boost mindfulness, creativity, and self-awareness.",
+    "size": 65,
+    "reviews": 20175,
+    "ratingAvg": 4.38,
+    "downloads": "3.7M",
+    "ratings": [
+      { "name": "1 star", "count": 720 },
+      { "name": "2 star", "count": 830 },
+      { "name": "3 star", "count": 4255 },
+      { "name": "4 star", "count": 6920 },
+      { "name": "5 star", "count": 6450 }
+    ]
+  },
+  {
+    "image": "https://example.com/app23.png",
+    "title": "Language Flashcards",
+    "companyName": "LinguaTech",
+    "id": 23,
+    "description": "Language Flashcards is a handy tool for memorizing vocabulary with customizable decks and spaced repetition algorithms. Suitable for learners of all levels, the app supports multiple languages and allows you to create your own flashcards or download from shared decks. Interactive quizzes, pronunciation guides, and progress tracking keep learning effective and fun. Perfect for students preparing for exams or anyone wanting to expand their vocabulary on the go.",
+    "size": 45,
+    "reviews": 16540,
+    "ratingAvg": 4.25,
+    "downloads": "2.9M",
+    "ratings": [
+      { "name": "1 star", "count": 680 },
+      { "name": "2 star", "count": 710 },
+      { "name": "3 star", "count": 3390 },
+      { "name": "4 star", "count": 5375 },
+      { "name": "5 star", "count": 4385 }
+    ]
+  },
+  {
+    "image": "https://example.com/app24.png",
+    "title": "Sleep Sounds & Relax",
+    "companyName": "CalmWave",
+    "id": 24,
+    "description": "Sleep Sounds & Relax provides a wide range of calming sounds and ambient music designed to improve sleep quality and reduce stress. Customize your sound mix with rain, ocean waves, white noise, and gentle melodies. The app also features a sleep timer and breathing exercises to help you unwind before bedtime. Ideal for anyone struggling with insomnia or looking to create a peaceful atmosphere for relaxation.",
+    "size": 80,
+    "reviews": 18700,
+    "ratingAvg": 4.40,
+    "downloads": "3.8M",
+    "ratings": [
+      { "name": "1 star", "count": 620 },
+      { "name": "2 star", "count": 740 },
+      { "name": "3 star", "count": 4200 },
+      { "name": "4 star", "count": 6550 },
+      { "name": "5 star", "count": 5690 }
+    ]
+  },
+  {
+    "image": "https://example.com/app25.png",
+    "title": "Budget Buddy",
+    "companyName": "FinancePro",
+    "id": 25,
+    "description": "Budget Buddy makes managing your finances simple and stress-free. Track expenses, create budgets, and set savings goals with an intuitive dashboard. The app offers reminders for bill payments, visual spending reports, and bank account syncing for real-time updates. Whether you want to get out of debt or save for a big purchase, Budget Buddy gives you the tools to take control of your money.",
+    "size": 110,
+    "reviews": 23040,
+    "ratingAvg": 4.33,
+    "downloads": "4.5M",
+    "ratings": [
+      { "name": "1 star", "count": 870 },
+      { "name": "2 star", "count": 900 },
+      { "name": "3 star", "count": 5375 },
+      { "name": "4 star", "count": 7025 },
+      { "name": "5 star", "count": 6865 }
+    ]
+  }
+
+]
+
+
+
+
+
+
+
+
+

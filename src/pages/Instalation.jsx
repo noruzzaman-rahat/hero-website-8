@@ -35,7 +35,7 @@ const Instalation = () => {
     setInstalledApp((prev) => prev.filter((app) => app.id !== id));
   };
   return (
-    <div className="bg-[#e9e9e9] min-h-screen">
+    <div className="bg-[#e9e9e9] mb-[20px]">
       <Container>
         <div className="py-10 space-y-2">
           <h1 className="text-3xl font-bold text-center">All Instaled Apps</h1>

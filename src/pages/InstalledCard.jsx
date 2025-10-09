@@ -4,17 +4,39 @@ import downlowdIcon from "../assets/icon-downloads.png";
 import ratingsIcon from "../assets/icon-ratings.png";
 import { deleteLocalStorage } from "../Utilities/AddToLocalStorage";
 
+import { toast } from "react-toastify";
+
 const InstalledCard = ({ app, onUninstall }) => {
   const { title, image, ratingAvg, downloads, size, id } = app;
 
   const handleUninstall = (id) => {
+    // Remove app from parent state
     onUninstall(id);
+
+    // Remove from localStorage
     deleteLocalStorage(id);
+
+    // ✅ Toastify alert
+    toast.info(`${title} has been uninstalled successfully!`, {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      style: {
+        background: "white",
+        color: "gray",
+        fontWeight: "500",
+        fontSize: "16px",
+      },
+    });
   };
 
   return (
     <Container>
-      <div className="flex flex-col md:flex-row justify-between items-center my-4 bg-white p-4 md:p-5 rounded-2xl shadow-sm ">
+      <div className="flex flex-col md:flex-row justify-between items-center my-4 bg-white p-4 md:p-5 rounded-2xl shadow-sm">
         {/* Image */}
         <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 bg-gray-300 rounded-2xl overflow-hidden">
           <img
@@ -51,7 +73,7 @@ const InstalledCard = ({ app, onUninstall }) => {
         <div className="mt-3 md:mt-0 md:ml-4">
           <button
             onClick={() => handleUninstall(id)}
-            className="btn btn-sm md:btn-md bg-[#00d390] text-white"
+            className="btn btn-sm md:btn-md bg-[#00d390] text-white hover:bg-[#00c07f] transition-colors"
           >
             Uninstall
           </button>

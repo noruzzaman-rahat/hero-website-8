@@ -75,8 +75,8 @@ const AppDetails = () => {
       draggable: true,
       progress: undefined,
       style: {
-        background: "white", // Tailwind blue-800
-        color: "gray", // text white
+        background: "white", 
+        color: "gray", 
         fontWeight: "500",
         fontSize: "16px",
       },

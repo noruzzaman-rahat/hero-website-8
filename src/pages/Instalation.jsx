@@ -35,10 +35,10 @@ const Instalation = () => {
     setInstalledApp((prev) => prev.filter((app) => app.id !== id));
   };
   return (
-    <div className="bg-[#e9e9e9] mb-[20px]">
+    <div className="min-h-screen bg-[#e9e9e9]">
       <Container>
         <div className="py-10 space-y-2">
-          <h1 className="text-3xl font-bold text-center">All Instaled Apps</h1>
+          <h1 className="text-3xl font-bold text-center">Your Installed Apps</h1>
           <p className="text-center">
             Explore All Trending Apps on the Market developed by us
           </p>

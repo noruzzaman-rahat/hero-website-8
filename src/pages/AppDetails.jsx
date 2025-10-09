@@ -87,7 +87,7 @@ const AppDetails = () => {
     <div>
       <Container>
         {/* App Header */}
-        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 p-4 md:p-6 bg-base-200 rounded-2xl">
+        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 p-4 md:p-6 bg-base-200 rounded-2xl mt-[30px]">
           {/* App Image */}
           <div className="w-full md:w-44 h-56 md:h-60 bg-gray-300 rounded-2xl flex-shrink-0">
             <img

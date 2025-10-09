@@ -24,10 +24,10 @@ const HeroSection = () => {
               ideas into digital experiences that truly make an impact.
             </p>
             <div className="flex items-center gap-2 justify-center">
-              <Link to="https://play.google.com/store/games?hl=en">
+              <Link className="bg-white rounded-xl" to="https://play.google.com/store/games?hl=en">
                 <img src={playstoreImg} alt="" />{" "}
               </Link>
-              <Link to="https://www.apple.com/app-store/">
+              <Link className="bg-white rounded-xl" to="https://www.apple.com/app-store/">
                 {" "}
                 <img src={appstoreImg} alt="" />
               </Link>
@@ -48,21 +48,21 @@ const HeroSection = () => {
               <div className="flex justify-center ">
                 <div className="space-y-2 text-white pb-5 text-center">
                   <p className="text-base-100">Total Downloads</p>
-                  <h1 className="text-xl md:text-3xl font-bold">29M</h1>
+                  <h1 className="text-2xl md:text-4xl font-extrabold">29.6M</h1>
                   <p className="text-base-100">21% more than last month</p>
                 </div>
               </div>
               <div className="flex justify-center ">
                 <div className="space-y-2 text-white pb-5 text-center">
                   <p className="text-base-100">Total Reviews</p>
-                  <h1 className="text-xl md:text-3xl font-bold">906K</h1>
+                  <h1 className="text-2xl md:text-4xl font-extrabold">906K</h1>
                   <p className="text-base-100">46% more than last month</p>
                 </div>
               </div>
               <div className="flex justify-center ">
                 <div className="space-y-2 text-white pb-5 text-center">
                   <p className="text-base-100">Active Apps</p>
-                  <h1 className="text-xl md:text-3xl font-bold">132+</h1>
+                  <h1 className="text-2xl md:text-4xl font-extrabold">132+</h1>
                   <p className="text-base-100">31 more will Launch</p>
                 </div>
               </div>

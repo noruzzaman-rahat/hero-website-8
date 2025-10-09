@@ -8,7 +8,7 @@ const Footer = () => {
       <Container>
         <footer className="footer sm:footer-horizontal bg-base-200 text-base-content justify-between">
           <aside>
-            <img src={Logo} className="w-[50px] h-[50px]" alt="" />
+            <img src={Logo} className="w-[70px] h-[70px]" alt="" />
         
             <p>
               Hero Tech Ltd.

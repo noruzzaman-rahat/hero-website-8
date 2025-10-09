@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../Container/Container";
 import { Link, NavLink } from "react-router";
 import { FaGithub } from "react-icons/fa";
-import logo from "../../assets/logo.png"
+import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   return (
@@ -48,13 +48,13 @@ const Navbar = () => {
               </ul>
             </div>
             <div className="flex gap-2 items-center">
-              <img className="w-6 h-6" src={logo} alt="" />
+              <img className="w-8 h-8" src={logo} alt="" />
               <Link
-              to="/"
-              className="text-xl font-bold bg-[linear-gradient(125.07deg,_rgba(99,46,227,1),_rgba(159,98,242,1)_100%)] text-transparent bg-clip-text "
-            >
-              HERO.IO
-            </Link>
+                to="/"
+                className="text-xl font-bold bg-[linear-gradient(125.07deg,_rgba(99,46,227,1),_rgba(159,98,242,1)_100%)] text-transparent bg-clip-text "
+              >
+                HERO.IO
+              </Link>
             </div>
           </div>
           <div className="navbar-center hidden lg:flex">

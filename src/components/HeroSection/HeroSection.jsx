@@ -24,10 +24,10 @@ const HeroSection = () => {
               ideas into digital experiences that truly make an impact.
             </p>
             <div className="flex items-center gap-2 justify-center">
-              <Link className="bg-white rounded-xl" to="https://play.google.com/store/games?hl=en">
+              <Link className="bg-white rounded-xl hover:bg-gray-200 transform hover:-translate-y-1 transition-all duration-200" to="https://play.google.com/store/games?hl=en">
                 <img src={playstoreImg} alt="" />{" "}
               </Link>
-              <Link className="bg-white rounded-xl" to="https://www.apple.com/app-store/">
+              <Link className="bg-white rounded-xl hover:bg-gray-200 transform hover:-translate-y-1 transition-all duration-200" to="https://www.apple.com/app-store/">
                 {" "}
                 <img src={appstoreImg} alt="" />
               </Link>

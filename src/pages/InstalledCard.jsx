@@ -4,7 +4,8 @@ import downlowdIcon from "../assets/icon-downloads.png";
 import ratingsIcon from "../assets/icon-ratings.png";
 import { deleteLocalStorage } from "../Utilities/AddToLocalStorage";
 
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const InstalledCard = ({ app, onUninstall }) => {
   const { title, image, ratingAvg, downloads, size, id } = app;
@@ -15,6 +16,7 @@ const InstalledCard = ({ app, onUninstall }) => {
 
     // Remove from localStorage
     deleteLocalStorage(id);
+    console.log("button clicked")
 
     // ✅ Toastify alert
     toast.info(`${title} has been uninstalled successfully!`, {
@@ -36,6 +38,9 @@ const InstalledCard = ({ app, onUninstall }) => {
 
   return (
     <Container>
+      {/* Toast Container */}
+            <ToastContainer />
+      
       <div className="flex flex-col md:flex-row justify-between items-center my-4 bg-white p-4 md:p-5 rounded-2xl shadow-sm">
         {/* Image */}
         <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 bg-gray-300 rounded-2xl overflow-hidden">
@@ -83,4 +88,4 @@ const InstalledCard = ({ app, onUninstall }) => {
   );
 };
 
-export default InstalledCard;
+export default InstalledCard; 

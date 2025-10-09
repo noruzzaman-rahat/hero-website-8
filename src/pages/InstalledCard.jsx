@@ -18,7 +18,7 @@ const InstalledCard = ({ app, onUninstall }) => {
     deleteLocalStorage(id);
     console.log("button clicked")
 
-    // ✅ Toastify alert
+    // Toastify alert
     toast.info(`${title} has been uninstalled successfully!`, {
       position: "top-center",
       autoClose: 3000,
@@ -34,13 +34,12 @@ const InstalledCard = ({ app, onUninstall }) => {
         fontSize: "16px",
       },
     });
+    
   };
 
   return (
-    <Container>
-      {/* Toast Container */}
-            <ToastContainer />
-      
+    <div>
+      <Container> 
       <div className="flex flex-col md:flex-row justify-between items-center my-4 bg-white p-4 md:p-5 rounded-2xl shadow-sm">
         {/* Image */}
         <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 bg-gray-300 rounded-2xl overflow-hidden">
@@ -85,6 +84,8 @@ const InstalledCard = ({ app, onUninstall }) => {
         </div>
       </div>
     </Container>
+    <ToastContainer></ToastContainer>
+    </div>
   );
 };
 

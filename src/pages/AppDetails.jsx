@@ -22,6 +22,10 @@ import {
 } from "../Utilities/AddToLocalStorage";
 import AppErrorPage from "./AppErrorPage";
 
+// Toastify Import
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const AppDetails = () => {
   const { id } = useParams();
   const { appData } = useAppData();
@@ -45,6 +49,7 @@ const AppDetails = () => {
   if (!data) {
     return <AppErrorPage />;
   }
+
   const {
     title,
     image,
@@ -60,71 +65,98 @@ const AppDetails = () => {
   const handleInstall = () => {
     addToLocalStorage(appId);
     setInstalled(true);
+
+    toast.success(`${title} has been installed successfully!`, {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      style: {
+        background: "white", // Tailwind blue-800
+        color: "gray", // text white
+        fontWeight: "500",
+        fontSize: "16px",
+      },
+    });
   };
 
   return (
     <div>
       <Container>
-        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20 md:my-5 p-3 bg-base-200 rounded-2xl">
-          <div className="md:w-44 h-60 bg-gray-300 rounded-2xl">
+        {/* App Header */}
+        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 p-4 md:p-6 bg-base-200 rounded-2xl">
+          {/* App Image */}
+          <div className="w-full md:w-44 h-56 md:h-60 bg-gray-300 rounded-2xl flex-shrink-0">
             <img
               className="w-full h-full object-cover rounded-2xl"
               src={image}
-              alt=""
+              alt={title}
             />
           </div>
-          <div className="space-y-3">
-            <div className="space-y-2 border-b border-gray-300 pb-5">
+
+          {/* App Info */}
+          <div className="flex-1 space-y-4">
+            {/* Title & Company */}
+            <div className="space-y-2 border-b border-gray-300 pb-4 md:pb-5">
               <h1 className="text-xl md:text-3xl font-bold">{title}</h1>
-              <p className="md:text-xl ">
-                <span className="text-gray-400">Develop by:</span>
+              <p className="md:text-lg flex flex-wrap items-center gap-1">
+                <span className="text-gray-400">Developed by:</span>
                 <span className="font-medium bg-[linear-gradient(125.07deg,_rgba(99,46,227,1),_rgba(159,98,242,1)_100%)] text-transparent bg-clip-text">
-                  {" "}
                   {companyName}
                 </span>
               </p>
             </div>
-            <div className="flex items-center gap-12">
-              <div className="flex flex-col">
-                <img className="w-5 md:w-7" src={downlowdIcon} alt="" />
-                <div className="my-2">
+
+            {/* Stats Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mt-4">
+              {/* Download */}
+              <div className="flex items-center gap-2 sm:gap-4 bg-white p-3 rounded-lg shadow-sm">
+                <img
+                  className="w-5 md:w-6"
+                  src={downlowdIcon}
+                  alt="downloads"
+                />
+                <div>
                   <p className="text-[#7f8488] text-xs md:text-sm">Download</p>
-                  <h1 className="text-xl md:text-[27px] font-bold">
-                    {downloads}
-                  </h1>
+                  <h1 className="text-lg md:text-xl font-bold">{downloads}</h1>
                 </div>
               </div>
-              <div className="flex flex-col">
-                <img className="w-5 md:w-7" src={ratingsIcon} alt="" />
-                <div className="my-2">
+
+              {/* Average Ratings */}
+              <div className="flex items-center gap-2 sm:gap-4 bg-white p-3 rounded-lg shadow-sm">
+                <img className="w-5 md:w-6" src={ratingsIcon} alt="ratings" />
+                <div>
                   <p className="text-[#7f8488] text-xs md:text-sm">
                     Average Ratings
                   </p>
-                  <h1 className="text-xl md:text-[27px] font-bold">
-                    {ratingAvg}
-                  </h1>
+                  <h1 className="text-lg md:text-xl font-bold">{ratingAvg}</h1>
                 </div>
               </div>
-              <div className="flex flex-col">
-                <img className="w-5 md:w-7" src={reviewIcon} alt="" />
-                <div className="my-2">
+
+              {/* Total Reviews */}
+              <div className="flex items-center gap-2 sm:gap-4 bg-white p-3 rounded-lg shadow-sm">
+                <img className="w-5 md:w-6" src={reviewIcon} alt="reviews" />
+                <div>
                   <p className="text-[#7f8488] text-xs md:text-sm">
                     Total Review
                   </p>
-                  <h1 className="text-xl md:text-[27px] font-bold">
-                    {reviews}
-                  </h1>
+                  <h1 className="text-lg md:text-xl font-bold">{reviews}</h1>
                 </div>
               </div>
             </div>
-            <div>
+
+            {/* Install Button */}
+            <div className="mt-3">
               <button
-                onClick={() => handleInstall(id)}
+                onClick={handleInstall}
                 disabled={installed}
-                className={`btn font-semibold ${
+                className={`btn w-full md:w-auto font-semibold ${
                   installed
                     ? "bg-gray-400 cursor-not-allowed"
-                    : "bg-teal-400 text-white"
+                    : "bg-[#00d390] text-white hover:bg-[#00c07f] transition-colors"
                 }`}
               >
                 {installed ? "Installed" : "Install Now"}{" "}
@@ -134,41 +166,43 @@ const AppDetails = () => {
           </div>
         </div>
 
-        <div className="my-20">
-          {
-            <div className="w-full h-72 md:h-96 my-20">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart
-                  layout="vertical"
-                  data={chartData}
-                  margin={{
-                    top: 5,
-                    right: 30,
-                    left: 20,
-                    bottom: 5,
-                  }}
-                >
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <YAxis dataKey="name" type="category" />
-                  <XAxis type="number" />
-                  <Tooltip />
-                  <Legend />
-                  <Bar
-                    dataKey="count"
-                    fill="#8884d8"
-                    barSize={30}
-                    activeBar={<Rectangle fill="pink" stroke="blue" />}
-                  />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-          }
+        {/* Chart */}
+        <div className="my-8 md:my-12 w-full h-64 md:h-96">
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              layout="vertical"
+              data={chartData}
+              margin={{
+                top: 5,
+                right: 20,
+                left: 20,
+                bottom: 5,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <YAxis dataKey="name" type="category" width={80} />
+              <XAxis type="number" />
+              <Tooltip />
+              <Legend />
+              <Bar
+                dataKey="count"
+                fill="#8884d8"
+                barSize={20}
+                radius={[5, 5, 5, 5]}
+              />
+            </BarChart>
+          </ResponsiveContainer>
         </div>
-        <div>
+
+        {/* Description */}
+        <div className="mb-[30px]">
           <h1 className="text-xl font-bold my-3">Description</h1>
-          <p className="text-justify">{description}</p>
+          <p className="text-justify text-sm md:text-base">{description}</p>
         </div>
       </Container>
+
+      {/* Toast Container */}
+      <ToastContainer />
     </div>
   );
 };

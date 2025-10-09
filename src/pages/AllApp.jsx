@@ -50,7 +50,7 @@ const AllApp = () => {
             <p>({filteredApp.length}) App Found</p>
           </div>
 
-          <div className="w-full sm:w-auto flex items-center gap-2 border px-3 py-2 rounded-md shadow-sm bg-white">
+          <div className="w-full sm:w-auto flex items-center gap-2 border px-3 py-2 rounded-md shadow-sm bg-white cursor-pointer  hover:border-blue-500 hover:bg-blue-50 hover:-translate-y-1 transform transition-all duration-200">
             <svg
               className="h-[1.2em] opacity-50"
               xmlns="http://www.w3.org/2000/svg"

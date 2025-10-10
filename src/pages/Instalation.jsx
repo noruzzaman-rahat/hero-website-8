@@ -55,9 +55,9 @@ const Instalation = () => {
   const handleSort = (type) => {
     setSort(type);
     let sortedApp = [...installedApp];
-    if (type === "size") {
+    if (type === "downloadsLow") {
       sortedApp.sort((a, b) => convSuffix(a.downloads) - convSuffix(b.downloads));
-    } else if (type === "rating") {
+    } else if (type === "downloadsHigh") {
       sortedApp.sort((a, b) => convSuffix(b.downloads) - convSuffix(a.downloads));
     }
     setInstalledApp(sortedApp);
@@ -137,13 +137,13 @@ const Instalation = () => {
             {dropdownOpen && (
               <ul className="absolute right-0 mt-2 w-44 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
                 <li
-                  onClick={() => handleSort("downloads")}
+                  onClick={() => handleSort("downloadsHigh")}
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white cursor-pointer"
                 >
                   High to Low
                 </li>
                 <li
-                  onClick={() => handleSort("downloads")}
+                  onClick={() => handleSort("downloadsLow")}
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white cursor-pointer"
                 >
                   Low to High

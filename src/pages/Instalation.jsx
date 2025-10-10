@@ -1,31 +1,48 @@
 import React, { useEffect, useState } from "react";
 import Container from "../components/Container/Container";
-import { getFromLocalStorage, deleteLocalStorage } from "../Utilities/AddToLocalStorage";
+import {
+  getFromLocalStorage,
+  deleteLocalStorage,
+} from "../Utilities/AddToLocalStorage";
 import useAppData from "../Hooks/useAppData";
 import InstalledCard from "./InstalledCard";
 
-
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import LoadImg from "../assets/logo.png"; // Loader image
 
 const Instalation = () => {
   const { appData } = useAppData();
   const [installedApp, setInstalledApp] = useState([]);
+  const [loading, setLoading] = useState(true); // loader state
   const [sort, setSort] = useState("none");
-  const [dropdownOpen, setDropdownOpen] = useState(false); // Control dropdown
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
-    const savedAppLocal = getFromLocalStorage() || [];
+    // enter installation, loading true 
+    setLoading(true);
 
-    if (!savedAppLocal.length || !appData || !appData.length) return;
+    //data load from localStorage
+    const timer = setTimeout(() => {
+      const savedAppLocal = getFromLocalStorage() || [];
+      if (!savedAppLocal.length || !appData?.length) {
+        setInstalledApp([]);
+        setLoading(false);
+        return;
+      }
 
-    const filteredApp = appData.filter((app) =>
-      savedAppLocal.map(Number).includes(app.id)
-    );
+      const filteredApp = appData.filter((app) =>
+        savedAppLocal.map(Number).includes(app.id)
+      );
 
-    setInstalledApp(filteredApp);
+      setInstalledApp(filteredApp);
+      setLoading(false); // loading end
+    }, 1200); // ১.২s fallback animation 
+
+    return () => clearTimeout(timer);
   }, [appData]);
 
+  // 🔹 Sorting logic
   const handleSort = (type) => {
     setSort(type);
     let sortedApp = [...installedApp];
@@ -35,23 +52,17 @@ const Instalation = () => {
       sortedApp.sort((a, b) => b.ratingAvg - a.ratingAvg);
     }
     setInstalledApp(sortedApp);
-    setDropdownOpen(false); // Close dropdown after selection
+    setDropdownOpen(false);
   };
 
+  //Uninstall logic + toast
   const handleUninstallApp = (id, title) => {
     setInstalledApp((prev) => prev.filter((app) => app.id !== id));
     deleteLocalStorage(id);
-    console.log("button clicked");
 
-    // Toastify alert
     toast.info(`${title} has been uninstalled successfully!`, {
       position: "top-center",
       autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
       style: {
         background: "white",
         color: "gray",
@@ -61,28 +72,42 @@ const Instalation = () => {
     });
   };
 
+  //  loading true, fallback 
+  if (loading) {
+    return (
+      <div className="flex flex-col items-center gap-3 mt-[100px]">
+        <div className="w-[100px] h-[100px] border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin">
+          <img src={LoadImg} alt="" />
+        </div>
+        <p className="text-gray-500 text-sm">Searching Trending Apps...</p>
+      </div>
+    );
+  }
+
+
   return (
     <div className="min-h-screen bg-[#e9e9e9]">
-      <ToastContainer/>
+      <ToastContainer />
       <Container>
-        <div className="py-10 space-y-2">
-          <h1 className="text-3xl font-bold text-center">Your Installed Apps</h1>
-          <p className="text-center">
-            Explore All Trending Apps on the Market developed by us
-          </p>
+        <div className="text-center space-y-3 py-10">
+          <h1 className="text-3xl font-bold">Your Installed Apps</h1>
+          <p className="text-[#627382]">Explore all your installed apps here</p>
         </div>
 
         {/* Sort Section */}
         <div className="my-8 px-3 flex justify-between items-center">
           <div className="text-xl font-semibold">
-            <p>({installedApp.length}) App{installedApp.length !== 1 ? "s" : ""} Found</p>
+            <p>
+              ({installedApp.length}) App
+              {installedApp.length !== 1 ? "s" : ""} Found
+            </p>
           </div>
 
           <div className="relative inline-block text-left">
             <button
               type="button"
               onClick={() => setDropdownOpen(!dropdownOpen)}
-              className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none"
             >
               Sort by: {sort.charAt(0).toUpperCase() + sort.slice(1)}
               <svg
@@ -124,16 +149,20 @@ const Instalation = () => {
             )}
           </div>
         </div>
-
-        {/* Installed Apps */}
         <div>
-          {installedApp.map((app) => (
-            <InstalledCard
-              key={app.id}
-              app={app}
-              onUninstall={handleUninstallApp}
-            />
-          ))}
+          {installedApp.length > 0 ? (
+            installedApp.map((app) => (
+              <InstalledCard
+                key={app.id}
+                app={app}
+                onUninstall={handleUninstallApp}
+              />
+            ))
+          ) : (
+            <p className="text-center text-gray-600 py-10">
+              No installed apps found.
+            </p>
+          )}
         </div>
       </Container>
     </div>

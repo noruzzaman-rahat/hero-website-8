@@ -83,7 +83,7 @@ const AllApp = () => {
           {loading ? (
             // 🔄 Fallback Loading Animation
             <div className="flex flex-col items-center gap-3">
-              <div className="w-10 h-10 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin">
+              <div className="w-[100px] h-[100px] border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin">
                  <img src={LoadImg} alt="" />
               </div>
               <p className="text-gray-500 text-sm">Searching apps...</p>
@@ -94,10 +94,10 @@ const AllApp = () => {
             <AppErrorPage></AppErrorPage>
             
           ) : (
-            // ✅ App Cards Grid
+            //  App Cards Grid
             <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 justify-items-center w-full">
               {filteredApp.map((app) => (
-                <AppCard key={app.id} app={app} />
+              <AppCard key={app.id} app={app} />
               ))}
             </div>
           )}

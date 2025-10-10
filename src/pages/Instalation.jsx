@@ -41,15 +41,24 @@ const Instalation = () => {
 
     return () => clearTimeout(timer);
   }, [appData]);
-
+  function convSuffix(str) {
+    const suffix = str[str.length-1].toLowerCase();
+    if (!isNaN(parseInt(suffix))) return parseInt(str);
+  
+    const num = parseFloat(str.slice(0, str.length-1));
+    if (suffix === 'k') return num * 1000;
+    else if (suffix === 'm') return num * 1000000;
+    else if (suffix === 'b') return num * 1000000000;
+    else return NaN;
+  }
   // 🔹 Sorting logic
   const handleSort = (type) => {
     setSort(type);
     let sortedApp = [...installedApp];
     if (type === "size") {
-      sortedApp.sort((a, b) => a.size - b.size);
+      sortedApp.sort((a, b) => convSuffix(a.downloads) - convSuffix(b.downloads));
     } else if (type === "rating") {
-      sortedApp.sort((a, b) => b.ratingAvg - a.ratingAvg);
+      sortedApp.sort((a, b) => convSuffix(b.downloads) - convSuffix(a.downloads));
     }
     setInstalledApp(sortedApp);
     setDropdownOpen(false);
@@ -131,13 +140,13 @@ const Instalation = () => {
                   onClick={() => handleSort("rating")}
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white cursor-pointer"
                 >
-                  Ratings: High to Low
+                  High to Low
                 </li>
                 <li
                   onClick={() => handleSort("size")}
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white cursor-pointer"
                 >
-                  Size: Low to High
+                  Low to High
                 </li>
                 <li
                   onClick={() => handleSort("none")}

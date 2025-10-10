@@ -7,19 +7,19 @@ A modern React-based web application using React Router for navigation. The app 
 
 ## Technologies Used:
 
-# React – 
+### React – 
 Frontend library for building user interfaces
 
-# React Router – 
+### React Router – 
 Client-side routing
 
-# React DOM – 
+### React DOM – 
 Rendering React components in the browser
 
-# JavaScript (ES6+) – 
+### JavaScript (ES6+) – 
 Core scripting language
 
 CSS – Styling.
 
-# Optional Libraries –  
+### Optional Libraries –  
 React Toastify, custom hooks, local storage utilities etc.

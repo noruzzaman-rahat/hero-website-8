@@ -137,13 +137,13 @@ const Instalation = () => {
             {dropdownOpen && (
               <ul className="absolute right-0 mt-2 w-44 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
                 <li
-                  onClick={() => handleSort("rating")}
+                  onClick={() => handleSort("downloads")}
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white cursor-pointer"
                 >
                   High to Low
                 </li>
                 <li
-                  onClick={() => handleSort("size")}
+                  onClick={() => handleSort("downloads")}
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white cursor-pointer"
                 >
                   Low to High
